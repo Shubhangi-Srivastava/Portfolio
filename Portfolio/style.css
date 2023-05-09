@@ -5,8 +5,8 @@
   box-sizing: border-box;
 }
 body {
-  background-color: #080808;
-  color: #fff;
+  background-color: #b7b7b7;
+  color: rgb(34, 34, 34);
   justify-content: center;
   display: flex;
 }
@@ -27,7 +27,7 @@ nav {
   height: 22%;
   clip-path: circle();
   left: 560px;
-  top: 100px;
+  top: 70px;
   position: relative;
 }
 
@@ -35,8 +35,8 @@ nav {
   font-size: 75.2px;
   position: relative;
   margin: 0;
-  margin-top: 65px;
-  margin-bottom: 20px;
+  margin-top: 40px;
+  margin-bottom: 15px;
   text-align: center;
 }
 
@@ -54,6 +54,67 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: rgba(234, 240, 246, 0.8);
+  /* color: rgba(234, 240, 246, 0.8); */
+  color: rgb(46, 46, 46);
   font-size: 18px;
+}
+
+.socialMedia {
+  text-align: center;
+  margin-top: 20px;
+  word-spacing: 40px;
+}
+
+.fa-facebook {
+  font-size: 40px;
+  color: #3b5998;
+  background-repeat: no-repeat;
+}
+
+.fa-facebook:hover {
+  transform: scale(1.2);
+  color: #293d68;
+}
+
+.fa-github {
+  font-size: 40px;
+  color: #000;
+  background-repeat: no-repeat;
+}
+
+.fa-github:hover {
+  transform: scale(1.2);
+  color: rgb(36, 36, 36);
+}
+
+.fa-instagram {
+  font-size: 40px;
+  background-repeat: no-repeat;
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  -webkit-background-clip: text;
+  /* Also define standard property for compatibility */
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.fa-instagram:hover {
+  transform: scale(1.2);
+}
+
+.fa-linkedin {
+  font-size: 40px;
+  color: #0a66c2;
+  background-repeat: no-repeat;
+}
+
+.fa-linkedin:hover {
+  transform: scale(1.2);
+  color: #08519a;
 }
