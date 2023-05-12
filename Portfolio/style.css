@@ -118,3 +118,11 @@ nav ul li a {
   transform: scale(1.2);
   color: #08519a;
 }
+
+.smoothscrol {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.fa-angle-double-down {
+}
