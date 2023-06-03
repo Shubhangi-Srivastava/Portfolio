@@ -126,3 +126,14 @@ nav ul li a {
 
 .fa-angle-double-down {
 }
+
+#about {
+  background-color: rgb(66, 63, 63);
+  padding-top: 96px;
+  padding-bottom: 66px;
+  overflow: hidden;
+}
+
+.about-col-2 {
+  margin-top: 20px;
+}
