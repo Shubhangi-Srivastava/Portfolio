@@ -4,6 +4,10 @@
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
 }
+
+html {
+  scroll-behavior: smooth;
+}
 body {
   background-color: #b7b7b7;
   color: rgb(34, 34, 34);
@@ -11,13 +15,20 @@ body {
   display: flex;
 }
 
+#header {
+  margin-bottom: 0px;
+}
+
+.container {
+  margin-bottom: 0px;
+}
 nav {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
   width: 100%;
   position: fixed;
 }
@@ -66,28 +77,52 @@ nav ul li a {
 }
 
 .fa-facebook {
+  /* font-size: 40px;
+  color: #3b5998;
+  background-repeat: no-repeat; */
   font-size: 40px;
   color: #3b5998;
   background-repeat: no-repeat;
+  transition: transform 0.3s, color 0.3s;
 }
 
 .fa-facebook:hover {
+  /* transform: scale(1.2);
+  color: #293d68; */
   transform: scale(1.2);
-  color: #293d68;
+  color: #4267b2;
 }
 
 .fa-github {
+  /* font-size: 40px;
+  color: #000;
+  background-repeat: no-repeat; */
   font-size: 40px;
   color: #000;
   background-repeat: no-repeat;
+  transition: transform 0.3s, color 0.3s;
 }
 
 .fa-github:hover {
   transform: scale(1.2);
-  color: rgb(36, 36, 36);
+  color: #333;
 }
 
 .fa-instagram {
+  /* font-size: 40px;
+  background-repeat: no-repeat;
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  -webkit-background-clip: text; */
+  /* Also define standard property for compatibility */
+  /* background-clip: text;
+  -webkit-text-fill-color: transparent; */
   font-size: 40px;
   background-repeat: no-repeat;
   background: radial-gradient(
@@ -99,12 +134,13 @@ nav ul li a {
     #285aeb 90%
   );
   -webkit-background-clip: text;
-  /* Also define standard property for compatibility */
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  transition: transform 0.3s, background-color 0.3s;
 }
 
 .fa-instagram:hover {
+  /* transform: scale(1.2); */
   transform: scale(1.2);
 }
 
@@ -112,11 +148,12 @@ nav ul li a {
   font-size: 40px;
   color: #0a66c2;
   background-repeat: no-repeat;
+  transition: transform 0.3s, color 0.3s;
 }
 
 .fa-linkedin:hover {
   transform: scale(1.2);
-  color: #08519a;
+  color: #2867b2;
 }
 
 .smoothscrol {
@@ -124,16 +161,253 @@ nav ul li a {
   margin-top: 80px;
 }
 
-.fa-angle-double-down {
+/* -----------------------------About--------------------------------*/
+.row {
+  margin-bottom: 0px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-col {
+  flex-basis: 48%;
 }
 
 #about {
   background-color: rgb(66, 63, 63);
-  padding-top: 96px;
-  padding-bottom: 66px;
+  padding-top: 44px;
+  padding-bottom: 44px;
   overflow: hidden;
+  /* new */
+  /* display: flex;*/
+  /* flex-wrap: wrap; */
+}
+.about-content {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .about-content {
+    text-align: justify;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+/* .about-col-1,
+.about-col-2 {
+  flex-basis: 100%;
+  text-align: center;
+} */
+
+.about-col-1 {
+  margin-top: 3px;
+  margin-left: auto;
+}
+
+.about-col-2 h2 {
+  margin-bottom: auto;
 }
 
 .about-col-2 {
+  color: #fff;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: justify;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.about-col-2 p {
+  color: rgb(172, 166, 166);
+  text-align: justify;
+  max-width: 100%;
+  word-break: break-word;
+}
+.about-col-2 .para-1 {
+  margin-bottom: 40px;
+}
+
+.about-col-2 .para-2 {
+  margin-top: 10px;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.video-placeholder {
+  animation: slideInFromLeft 1s ease-in-out;
+}
+
+.resume-download {
+  text-align: center;
   margin-top: 20px;
+}
+
+.resume-download button {
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #555;
+  opacity: 1;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.resume-download button:hover:before {
+  opacity: 1;
+}
+
+.resume-download button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.resume-download button:focus {
+  outline: none;
+}
+
+.resume-download button:active {
+  transform: translateY(1px);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+/* --------------- Resume -------------- */
+/* --------------- Education -------------- */
+#resume {
+  display: flex;
+}
+
+.education {
+  background-color: #f5f5f5;
+  padding: 50px;
+}
+
+.education h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.timeline {
+  list-style: none;
+  padding: 0;
+}
+.timeline li {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+@keyframes shadow-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.3);
+  }
+}
+.bullet {
+  position: absolute;
+  left: -20px;
+  top: 12%;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: box-shadow 0.6s;
+}
+
+.bullet img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.bullet:hover {
+  animation: shadow-pulse 1s infinite;
+}
+
+.timeline li:hover .bullet {
+  box-shadow: 0 0 0 10px #555;
+  animation: shadow-pulse 1s infinite;
+}
+
+.timeline li:hover .bullet::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0) 80%
+  );
+  border-radius: 50%;
+}
+
+/* code for showing timeline style line between both bullets in education"
+
+/* .timeline li::before {
+  content: "";
+  position: absolute;
+  top: 55px;
+  left: -1%;
+  width: 2px;
+  height: calc(100% - 25px);
+  background-color: #333; 
+  transform: translateX(-50%);
+  z-index: 0;
+  font-weight: bold;
+} */
+
+.education-entry {
+  background-color: #f5f5f5;
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: transform 0.3s;
+}
+
+.education-entry h3 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.education-entry .degree {
+  font-style: italic;
+  font-weight: bold;
+  color: #555;
+}
+
+.education-entry .dates {
+  color: #888;
+}
+
+.education-entry .info {
+  display: block;
+  margin-bottom: 40px;
+}
+
+.education-entry .degree,
+.education-entry .grad-date,
+.education-entry .info {
+  display: inline-block;
+  margin-left: 40px;
+  display: block;
 }
