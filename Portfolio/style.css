@@ -441,45 +441,92 @@ nav ul li a {
   display: block;
 }
 /* --------------- Work Experience -------------- */
-.work-exp {
-  margin: 10px;
-}
-.work-exp .timeline {
+
+.exp-timeline {
+  margin: auto;
   position: relative;
-  max-width: 1200px;
-  margin: 100px auto;
+  max-width: 900px;
+  /* display: grid; */
+  /* margin: 100px auto; */
 }
 
-.work-exp .text-box {
+.exp-timeline .text-box {
   padding: 20px 30px;
   background-color: #fff;
   position: relative;
   border-radius: 6px;
   font-size: 15px;
 }
-.work-exp .container {
-  padding: 10px 0px;
+.exp-timeline .container {
+  padding: 20px 40px;
   position: relative;
-  width: 410px;
-  background-color: rgba(0, 0, 0, 0.3);
+  /* width: 410px; */
+  width: 50%;
+  /* margin: 100px auto; */
 }
-.work-exp .text-box p {
+/* .exp-timeline .text-box p {
   text-align: justify;
-  /* justify-content: end; */
-}
-.work-exp .left-container {
+ 
+} */
+.exp-timeline .left-container {
   left: 0px;
 }
 
-.work-exp .right-container {
-  left: 29%;
+/* .exp-timeline .left-container {
+  left: 0px;
+  content: "";
+} */
+
+.exp-timeline .right-container {
+  left: 50%;
 }
 
-.work-exp .container img {
+.exp-timeline .container img {
   position: absolute;
-  width: 40px;
+  width: 50px;
   border-radius: 50%;
   right: -20px;
   top: 32px;
   z-index: 10;
+}
+
+.exp-timeline .right-container img {
+  left: -24px;
+}
+
+.exp-timeline .text-box .right-container {
+  content: none !important;
+}
+
+.exp-timeline .left-container::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 100%;
+  background-color: #fff;
+  top: 0;
+  left: 99%;
+  margin-left: -3px;
+  z-index: -1;
+}
+
+.exp-timeline .right-container::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 100%;
+  background-color: #fff;
+  top: 0;
+  left: -1%;
+  margin-left: -3px;
+  z-index: -1;
+}
+
+.exp-timeline .text-box h2 {
+  font-weight: 600;
+}
+
+.exp-timeline .text-box small {
+  display: inline-block;
+  margin-bottom: 15px;
 }
